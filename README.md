@@ -4,7 +4,7 @@
 
 This is a functional web app that uses the TMDB API to do searches for Actors and display their most known shows and movies. It contains all the needed CSS and JS for the app to work while online.
 
-The Starter version is hosted on Netlify here: [](). The code is available through this Repo [mad9022-pwa-actor-search](https://github.com/prof3ssorSt3v3/mad9022-pwa-actor-search).
+The Starter version is hosted on Netlify here: [https://sample-actor-search.netlify.app/](https://sample-actor-search.netlify.app/). The code is available through this Repo [mad9022-pwa-actor-search](https://github.com/prof3ssorSt3v3/mad9022-pwa-actor-search).
 
 ## Objective
 

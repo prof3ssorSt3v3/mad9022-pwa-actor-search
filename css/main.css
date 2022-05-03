@@ -309,8 +309,13 @@ span.highlight {
   color: var(--accent);
 }
 /* Media Queries */
-@media all and (max-width: 700px) {
+@media all and (max-width: 600px) {
   html {
     font-size: 12px;
+  }
+}
+@media all and (min-width: 601px) and (max-width: 1100px) {
+  html {
+    font-size: 14px;
   }
 }
