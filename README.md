@@ -42,6 +42,14 @@ In all your HTML files you will need to add the missing `link` and `meta` tags i
 
 You will also have to add the links to the service worker and the web manifest to every page.
 
+## TODO Items
+
+Look through the HTML, CSS, and JS files that are provided in the starter code. You will see `TODO:` in places. These are things that you need to add or change.
+
+For example, you need to come up with your own colour scheme and change the values for the CSS variables in main.css.
+
+Do a search for `TODO:` in all the files to find these.
+
 ## Lighthouse Test
 
 In the Chrome Dev Tools your site will have to pass the Lighthouse PWA test.
