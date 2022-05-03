@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+    Need to add the web manifest link
+    Need to add the link/meta tags for theme and icons including favicon
+    Need to add CSP meta tag
+  -->
+    <title>Acting Out</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body id="shows">
+    <header class="masthead">
+      <h1>Acting <span class="twist">Out</span></h1>
+      <!-- icon button to show list of previous searches -->
+    </header>
+    <div class="container">
+      <!-- content goes here -->
+      <h2>Movies &amp; Shows for <span class="highlight">Name</span></h2>
+      <ul class="cards">
+        <!-- <li class="card" data-id="1">
+          <img class="poster" href="" alt="movie or show poster" />
+          <h3 class="title">Movie/Show title</h3>
+          <p class="release">12-25-1975</p>
+          <p class="desc">Description</p>
+        </li> -->
+      </ul>
+    </div>
+    <!-- search form -->
+    <form class="foot" action="#" method="get" id="formSearch">
+      <input
+        type="text"
+        id="txtSearch"
+        name="txtSearch"
+        autofocus
+        tabindex="1"
+      />
+      <span id="btnSearch" class="material-symbols-outlined">search</span>
+    </form>
+  </body>
+</html>

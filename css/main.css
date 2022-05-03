@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Raleway:wght@300&display=swap');
+
+:root {
+  /* Colors */
+  /* TODO: replace these colours with your own colour scheme */
+  --primary: #ffc107;
+  --primaryDark: #ffa000;
+  --primaryLight: #ffecb3;
+  --bright: #f4f4f4;
+  --accent: #03a9f4;
+  --primaryText: #212121;
+  --secondaryText: #757575;
+  --lines: #bdbdbd;
+  --success: hsl(90, 60%, 30%);
+  --error: hsl(0, 60%, 30%);
+
+  /* TypeScale */
+  --head1: 4.209rem;
+  --head2: 3.157rem;
+  --head3: 2.369rem;
+  --body1: 1.777rem;
+  --body2: 1.333rem;
+  --body3: 1rem;
+  --small: 0.75rem;
+}
+/* Defaults */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--primaryLight);
+}
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+.masthead {
+  background-color: var(--primary);
+  border-bottom: var(--small) solid var(--primaryDark);
+  box-shadow: 0 4px 4px var(--lines);
+}
+.masthead h1 {
+  color: var(--primaryText);
+  font-size: var(--head1);
+  font-family: Bangers, serif;
+  letter-spacing: 0.2rem;
+  word-spacing: 1rem;
+  cursor: pointer;
+}
+.foot {
+  box-shadow: 0 -4px 4px var(--lines);
+  padding: 0.5rem 2rem;
+}
+h1 {
+  font-size: var(--head1);
+  color: var(--primaryText);
+}
+h2 {
+  font-size: var(--head2);
+  color: var(--primaryText);
+}
+h3 {
+  font-size: var(--head3);
+  color: var(--primaryText);
+}
+h4 {
+  font-size: var(--head3);
+  color: var(--secondaryText);
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+  margin: 0;
+  padding: 1rem 0;
+  line-height: 1;
+}
+p,
+li {
+  font-size: var(--body2);
+  font-weight: 300;
+  margin: 0;
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+img {
+  width: 100%;
+}
+a,
+a:link,
+a:active,
+a:visited,
+a:hover {
+  font-weight: 300;
+  color: var(--accent);
+}
+input[type='text'].error {
+  background-color: hsla(0, 50%, 80%, 0.8) !important;
+}
+/* Layout */
+.masthead {
+  padding: 1rem 2rem;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 8rem;
+}
+.container {
+  padding: 1rem 2rem 6rem 2rem;
+}
+#actors,
+#shows {
+  justify-content: stretch;
+}
+#actors .container,
+#shows .container {
+  margin-top: 8rem;
+}
+.foot {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 5rem;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.foot input[type='text'] {
+  flex-basis: 75vw;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 0.5rem 0.5rem;
+  padding: 0.25rem 1rem;
+  font-size: var(--head3);
+  /* 0.5 + 0.25 + 2.4rem + 0.25 + 0.5 = 3.9rem + 2px border */
+  background-color: hsla(0, 0%, 100%, 0.32);
+  text-align: end;
+  border: 1px solid var(--lines);
+}
+.foot span {
+  /* flex-basis: 10vw; */
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: var(--head2);
+  color: var(--accent);
+  background-color: var(--primaryLight);
+  border-radius: 50%;
+}
+/* ListTiles */
+.tiles {
+  /* container for list tiles */
+  list-style-type: none;
+  margin: 0;
+  padding: 1rem 0;
+}
+.tile {
+  /* list tile */
+  width: 92vw;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  background-color: var(--bright);
+  border: 1px solid var(--lines);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+  box-shadow: 0 0 0 var(--line);
+  transition: box-shadow 0.4s linear;
+}
+.tile:hover {
+  box-shadow: 0.5rem 0.5rem 1rem var(--lines);
+}
+.tile .avatar {
+  width: 5rem;
+  height: auto;
+  clip-path: circle(4rem at 2.5rem 2.5rem);
+  z-index: 1;
+  flex-grow: 0;
+  flex-shrink: 1;
+  margin: 0.5rem;
+}
+.tile .details {
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 0.5rem 1rem;
+}
+.tile .details h3 {
+  font-size: var(--body1);
+  color: var(--accent);
+}
+.tile .details p {
+  font-size: var(--body2);
+  color: var(--secondaryText);
+  padding: 0;
+  line-height: 1;
+}
+.tile .pop {
+  flex-grow: 0;
+  flex-shrink: 1;
+  background-color: var(--accent);
+  color: var(--bright);
+  border-radius: 1rem;
+  font-size: var(--body1);
+  padding: 0.5rem;
+  margin: 1rem 0.5rem;
+}
+
+/* Cards */
+.cards {
+  /* container for movie cards */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  list-style-type: none;
+  margin: 0;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+.card {
+  /* movie cards */
+  width: clamp(300px, 40vw, 500px);
+  border: 1px solid var(--lines);
+  background-color: var(--bright);
+  box-shadow: 0.5rem 0.5rem 0.5rem var(--lines);
+}
+.card .poster {
+  width: 100%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 300px, 0% 300px);
+}
+.card .char {
+  color: var(--primaryText);
+  font-size: var(--body1);
+  padding: 0.5rem 1rem;
+}
+.card .title {
+  color: var(--accent);
+  font-size: var(--head3);
+  padding: 0.5rem 1rem;
+}
+.card .release {
+  color: var(--secondaryText);
+  font-size: var(--body2);
+  padding: 0 1rem;
+}
+.card .desc {
+  font-size: var(--body3);
+  color: var(--secondaryText);
+  padding: 0 1rem;
+}
+/* Messages */
+.message {
+  position: fixed;
+  bottom: 10vh;
+  left: 0;
+  min-height: 9rem;
+  padding: 1rem;
+  width: clamp(300px, 50vw, 800px);
+  margin: 0 25vw;
+  font-size: var(--body1);
+  background-color: white;
+  border-width: 1rem 1px 1px 1px;
+  border-style: solid;
+  border-color: var(--lines);
+}
+.message.info {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.message.success {
+  border-color: var(--success);
+  color: var(--success);
+}
+.message.error {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+/* Visual Styles */
+span.twist {
+  display: inline-block;
+  transform-origin: left bottom;
+  transform: rotate(-15deg);
+}
+span.highlight {
+  color: var(--accent);
+}
+/* Media Queries */
+@media all and (max-width: 700px) {
+  html {
+    font-size: 12px;
+  }
+}
